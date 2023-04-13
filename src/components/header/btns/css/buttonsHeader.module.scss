@@ -1,0 +1,40 @@
+.Btns {
+  display: flex;
+  gap: 15px;
+}
+.Btns button {
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.Btns button:first-child {
+  height: 50px;
+  width: 142px;
+  border: 2px solid #ad02e0;
+  color: black;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.Btns button:last-child:hover,
+.Btns button:first-child:hover {
+  color: white;
+  background: #ad02e0;
+  box-shadow: 0px 0px 20px #ad02e0;
+}
+
+.Btns button:active {
+  background: #740994 !important;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid #740994;
+}
+
+.Btns button:last-child {
+  width: 206px;
+  background: #ad02e0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}

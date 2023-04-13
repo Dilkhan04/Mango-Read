@@ -1,6 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./css/header.module.scss";
+import { AppBar, Box, Container, Typography } from "@mui/material";
+import { NavLink } from "react-router-dom";
+import logo from "../../media/icons/header/mangoRead.svg";
+import { StylesTextField } from "../theme/Theme";
+import ButtonsHeader from "./btns/ButtonsHeader";
+import SearchIcon from "@mui/icons-material/Search";
 
 export default function Header() {
-  return <div className={style.Header}>Header</div>;
+  const [searh, setSearh] = useState(false);
+
+  return (
+    <AppBar fixed='true' className={style.Header}>
+      <Container>
+        <Box className={style.HeaderInner}>
+          <Box className={style.HeaderLogo}>
+            <NavLink to='/'>
+              <Box component='img' src={logo} alt='logo-MangaRead'></Box>
+              <Box className={style.HeaderText}>
+                <Typography variant='h4'>MangoRead</Typography>
+                <Typography variant='span'>Читай мангу с нами</Typography>
+              </Box>
+            </NavLink>
+          </Box>
+          <Box className={style.HeaderSearch}>
+            <StylesTextField
+              sx={{
+                "& > div > input": { paddingLeft: searh ? "16px" : "56px" },
+              }}
+              type='text'
+              onFocus={() => setSearh(true)}
+              onBlur={() => setSearh(false)}
+            />
+            <SearchIcon
+              style={
+                searh
+                  ? { left: "-20px", opacity: 0 }
+                  : { left: "19px", opacity: 1 }
+              }
+            />
+          </Box>
+          <Box className={style.HeaderBtns}>
+            <ButtonsHeader />
+          </Box>
+        </Box>
+      </Container>
+    </AppBar>
+  );
 }

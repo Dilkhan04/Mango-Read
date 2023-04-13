@@ -1,0 +1,82 @@
+.Footer {
+  height: 402px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.FooterInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.FooterInner a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.FooterLogo svg {
+  width: 127px;
+  height: 98px;
+}
+.FooterInner h4 {
+  font-size: 24px;
+  color: black;
+  font-weight: 500;
+  line-height: 29px;
+  margin-bottom: 9px;
+}
+.FooterInner span {
+  color: #878787;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.FooterLinks ul li a span {
+  display: flex;
+  align-items: center;
+  column-gap: 17px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+}
+.FooterLinks ul {
+  display: flex;
+  row-gap: 32px;
+  flex-direction: column;
+}
+.FooterInnerBootom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  border-top: 1px solid #bbbbbb;
+  padding-top: 40px;
+}
+.FooterInnerBootom a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.Bottom {
+  width: max-content;
+  height: max-content;
+  margin: 0 auto;
+  display: flex;
+  column-gap: 32px;
+}
+
+.Right {
+  display: flex;
+  column-gap: 24px;
+}
+
+.Right a {
+  border-bottom: 1px solid black;
+}
