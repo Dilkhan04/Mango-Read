@@ -1,0 +1,36 @@
+.ModalInner {
+  width: 603px;
+  height: 761px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  transition: 0.7s;
+  padding-left: 52px;
+}
+.ModalInner svg {
+  cursor: pointer;
+  position: absolute;
+  top: 31px;
+  right: 56px;
+}
+.ModalInner svg:hover {
+  transition: 0.6s;
+  transform: rotate(360deg);
+}
+.Btns {
+  display: flex;
+  column-gap: 30px;
+  margin-top: 66px;
+  border-bottom: 1px solid black;
+  width: 499px;
+}
+.Btns span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+  cursor: pointer;
+}

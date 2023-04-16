@@ -1,18 +1,12 @@
 import React from "react";
-import style from "./css/footer.module.scss";
-import {
-  Box,
-  Container,
-  List,
-  ListItem,
-  Typography,
-  Link,
-} from "@mui/material";
-import { NavLink } from "react-router-dom";
+import style from "./scss/Footer.module.scss";
+import { Box, Container, List, ListItem, Typography } from "@mui/material";
 import { ReactComponent as Logo } from "../../media/icons/header/mangoRead.svg";
 import { ReactComponent as Facebook } from "../../media/icons/footer/Facebook.svg";
 import { ReactComponent as Instagram } from "../../media/icons/footer/Instagram.svg";
 import { ReactComponent as Twitter } from "../../media/icons/footer/Twitter.svg";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -20,36 +14,44 @@ export default function Footer() {
       <Container>
         <Box className={style.FooterInner}>
           <Box className={style.FooterLogo}>
-            <NavLink to='/'>
+            <Link
+              to='top'
+              activeClass='active'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              style={{ cursor: "pointer" }}
+            >
               <Logo />
               <Box>
                 <Typography variant='h4'>MangoRead</Typography>
                 <Typography variant='span'>Читай мангу с нами</Typography>
               </Box>
-            </NavLink>
+            </Link>
           </Box>
           <Box className={style.FooterLinks}>
             <List>
               <ListItem>
-                <Link href='#' alt='facebook'>
+                <NavLink to='https://ru-ru.facebook.com/' alt='facebook'>
                   <Typography component='span'>
-                    <Facebook /> Link One
+                    <Facebook /> Facebook
                   </Typography>
-                </Link>
+                </NavLink>
               </ListItem>
               <ListItem>
-                <Link href='#' alt='instagram'>
+                <NavLink to='https://www.instagram.com/' alt='instagram'>
                   <Typography component='span'>
-                    <Instagram /> Link Two
+                    <Instagram /> Instagram
                   </Typography>
-                </Link>
+                </NavLink>
               </ListItem>
               <ListItem>
-                <Link href='#' alt='twitter'>
+                <NavLink to='https://twitter.com/?lang=ru' alt='twitter'>
                   <Typography component='span'>
-                    <Twitter /> Link Three
+                    <Twitter /> Twitter
                   </Typography>
-                </Link>
+                </NavLink>
               </ListItem>
             </List>
           </Box>
@@ -59,13 +61,14 @@ export default function Footer() {
               width='400'
               height='250'
               style={{
-                border: 0,
                 borderRadius: 20,
+                border: "none",
                 filter: "drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15))",
               }}
-              allowfullscreen=''
+              allowFullScreen=''
               loading='lazy'
-              referrerpolicy='no-referrer-when-downgrade'
+              referrerPolicy='no-referrer-when-downgrade'
+              title='myFrame'
             />
           </Box>
         </Box>
@@ -73,20 +76,20 @@ export default function Footer() {
       <Box className={style.FooterInnerBootom}>
         <Box className={style.Bottom}>
           <Box>
-            <Link href='#' alt='twitter'>
+            <Link to='/#' alt='twitter'>
               <Typography component='span'>
                 ©2022, All right reserved.
               </Typography>
             </Link>
           </Box>
           <Box className={style.Right}>
-            <Link href='#' alt='twitter'>
+            <Link to='/#' alt='twitter'>
               <Typography component='span'>Privacy Policy</Typography>
             </Link>
-            <Link href='#' alt='twitter'>
+            <Link to='/#' alt='twitter'>
               <Typography component='span'>Terms of Service</Typography>
             </Link>
-            <Link href='#' alt='twitter'>
+            <Link to='/#' alt='twitter'>
               <Typography component='span'>Cookies Settings</Typography>
             </Link>
           </Box>

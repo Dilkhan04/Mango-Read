@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./css/header.module.scss";
+import style from "./scss/Header.module.scss";
 import { AppBar, Box, Container, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import logo from "../../media/icons/header/mangoRead.svg";
@@ -11,7 +11,7 @@ export default function Header() {
   const [searh, setSearh] = useState(false);
 
   return (
-    <AppBar fixed='true' className={style.Header}>
+    <AppBar position='relative' className={style.Header}>
       <Container>
         <Box className={style.HeaderInner}>
           <Box className={style.HeaderLogo}>
@@ -28,6 +28,7 @@ export default function Header() {
               sx={{
                 "& > div > input": { paddingLeft: searh ? "16px" : "56px" },
               }}
+              placeholder='Placeholder'
               type='text'
               onFocus={() => setSearh(true)}
               onBlur={() => setSearh(false)}
@@ -35,8 +36,8 @@ export default function Header() {
             <SearchIcon
               style={
                 searh
-                  ? { left: "-20px", opacity: 0 }
-                  : { left: "19px", opacity: 1 }
+                  ? { width: "0px", left: "19px", top: "17px", opacity: 0 }
+                  : { width: "24px", left: "19px", top: "17px", opacity: 1 }
               }
             />
           </Box>

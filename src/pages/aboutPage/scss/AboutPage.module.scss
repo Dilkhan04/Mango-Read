@@ -1,0 +1,26 @@
+.AboutPage {
+  background: #f3f3f3;
+  padding-top: 33px;
+  padding-bottom: 37px;
+}
+.AboutPageInner img {
+  width: 328px;
+  height: 328px;
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+  border-radius: 16px;
+  border: 1px dotted black;
+}
+.AboutPageBlockOne {
+  display: flex;
+  column-gap: 41px;
+  margin-top: 33px;
+}
+
+.AboutPageInner button {
+  display: flex;
+  column-gap: 15px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #878787;
+}
