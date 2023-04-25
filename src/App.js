@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<MainPage />} />
+        <Route index element={<MainPage />} />
         <Route path='/aboutPage/:id' element={<AboutPage />} />
       </Routes>
       <Footer />

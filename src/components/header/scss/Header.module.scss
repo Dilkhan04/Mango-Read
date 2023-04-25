@@ -4,6 +4,9 @@
   justify-content: center;
   height: 110px;
   background: #fff !important;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 .HeaderInner {
@@ -53,4 +56,52 @@
   transition: 0.4s ease-in-out !important;
   color: black;
   z-index: 20;
+}
+
+.SearchBox {
+  width: 331px;
+  border-radius: 0 0 8px 8px;
+  border-right: 2px inset #740994;
+  border-left: 2px inset #740994;
+  border-bottom: 2px inset #740994;
+  border-top: none;
+  overflow-y: scroll;
+  position: absolute;
+  bottom: -200px;
+  top: 50px;
+  background: white;
+  display: flex;
+  left: 6px;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.SearchBox::-webkit-scrollbar {
+  width: 15px;
+  height: 20px;
+  margin-left: 5px;
+}
+.SearchBox::-webkit-scrollbar-thumb {
+  background: #d5d6d5;
+  border-radius: 8px;
+  margin-right: 15px;
+  border: none;
+}
+.SearchBox::-webkit-scrollbar-thumb:hover {
+  background: #2fe09b;
+}
+
+
+.scanImg {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.SearchBox a {
+ width: max-content;
+ height: max-content;
+}
+.scanImg img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
 }

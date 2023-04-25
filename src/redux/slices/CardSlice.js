@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
-const link = "https://pokeapi.co/api/v2/pokemon/";
+import { link } from "./CardsSlice";
 
 const initialState = {
   card: {},
@@ -9,7 +8,7 @@ const initialState = {
 };
 
 export const getCard = createAsyncThunk("card", async (id) => {
-  const { data } = await axios.get(`${link}${id}`);
+  const { data } = await axios.get(link + "manga/" + id);
   return data;
 });
 

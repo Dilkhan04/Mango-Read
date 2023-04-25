@@ -1,6 +1,7 @@
 .ModalInner {
   width: 603px;
-  height: 761px;
+  max-height: 751px !important;
+  min-height: 478px;
   background: white;
   position: absolute;
   top: 50%;
@@ -8,7 +9,6 @@
   transform: translate(-50%, -50%);
   border-radius: 30px;
   transition: 0.7s;
-  padding-left: 52px;
 }
 .ModalInner svg {
   cursor: pointer;
@@ -20,17 +20,122 @@
   transition: 0.6s;
   transform: rotate(360deg);
 }
+.ModalInnerInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .Btns {
   display: flex;
   column-gap: 30px;
   margin-top: 66px;
   border-bottom: 1px solid black;
   width: 499px;
+  margin-bottom: 21px;
 }
-.Btns span {
+.Btns button {
   font-weight: 400;
   font-size: 24px;
   line-height: 35px;
   color: #000000;
-  cursor: pointer;
+}
+
+.ModalReg {
+  padding-top: 66px;
+}
+.ModalReg button {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+}
+.Auth {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.Check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding-left: 7px;
+  width: max-content;
+}
+.Check svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Check input {
+  width: 35px;
+  height: 35px;
+}
+.Check span:first-child {
+  width: 35px;
+  height: 35px;
+}
+.Check span:last-child {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #878787;
+}
+.Auth button:hover {
+  background: #ad02e0;
+  color: white;
+}
+.Auth button:active {
+  background: #740994 !important;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.25) !important;
+}
+.AddImage button {
+  margin-top: 21px;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+.AddImage button:hover {
+  background: none;
+}
+.AddImage button:active {
+  background: white;
+}
+.AddImage {
+  display: flex;
+  flex-direction: column;
+}
+.UserImage {
+  width: 181px;
+  height: 181px;
+  border-radius: 50%;
+}
+.Reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.RegInputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.RegInputs button:hover {
+  background: #ad02e0;
+  color: white;
+}
+.RegInputs button:active {
+  background: #740994 !important;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.25) !important;
+}
+.Btns span {
+  top: 57px;
+  border: 3px;
 }

@@ -1,7 +1,123 @@
 .Filter {
-  width: 400px;
-  height: 770px;
+  min-width: 400px !important;
+  max-height: 700px !important;
   background: white;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 15px;
+  padding-top: 30px;
+}
+.FilterTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.FilterTitle p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+}
+.FilterTitle button {
+  width: 95px;
+  display: flex;
+  justify-content: space-between;
+}
+.FilterTitle button > span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #878787;
+}
+.FilterTitle button > svg {
+  font-size: 10px !important;
+}
+.FilterType {
+  margin-top: 43px;
+}
+.FilterType p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.Check svg {
+  fill: #2fe09b;
+  width: 35px;
+  height: 35px;
+}
+.TypesList {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  transform: translateX(-10px);
+}
+
+.TypesList li div label span {
+  margin-left: 10px;
+}
+
+.TypesList li {
+  padding: 0 !important;
+  margin-left: 7px;
+}
+
+.TypesList span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+}
+.InputForDate {
+  margin-top: 33px;
+  display: flex;
+  justify-content: space-between;
+}
+.InputForDate hr {
+  width: 12px;
+  height: 2px;
+  border: none;
+  outline: none;
+  background-color: #000;
+  margin-top: 25px;
+}
+.InputForDate input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.FilterBtns {
+  margin-top: 215px;
+  display: flex;
+  justify-content: space-between;
+}
+.FilterTitle button:hover {
+  background: white;
+}
+.FilterBtns button {
+  width: 174px;
+  height: 52px;
+  background: #ad02e0;
+  border-radius: 8px;
+  color: white;
+}
+.FilterBtns button:hover {
+  background: #ad02e0;
+  color: white;
+}
+.FilterBtns button:active {
+  background: #740994;
+  color: white;
+}
+
+.Check input {
+  width: 35px;
+  height: 35px;
+}
+.Check span {
+  width: 35px;
+  height: 35px;
 }

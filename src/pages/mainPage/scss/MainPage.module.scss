@@ -1,7 +1,8 @@
 .MainPage {
   height: 847px;
   background: #f3f3f3;
-  padding: 32px 0 47px;
+  padding: 32px 0;
+  margin-top: 112px;
 }
 
 .MainPageInner {
@@ -14,8 +15,9 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  height: 491px;
+  height: 700px;
   width: 820px;
+  padding: 0 !important;
 }
 .Load {
   width: 100%;
@@ -23,4 +25,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.MainPagePagination {
+  width: max-content;
+  margin: 0 auto !important;
+  margin-top: 33px !important;
+  margin-bottom: 32px !important;
+}
+.MangaCards {
+  height: 700px !important;
 }

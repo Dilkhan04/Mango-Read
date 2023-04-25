@@ -11,7 +11,14 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <Box className={style.Footer} component='footer'>
-      <Container>
+      <Container
+        sx={{
+          "&.MuiContainer-root": {
+            padding: 0,
+            maxWidth: 1240,
+          },
+        }}
+      >
         <Box className={style.FooterInner}>
           <Box className={style.FooterLogo}>
             <Link

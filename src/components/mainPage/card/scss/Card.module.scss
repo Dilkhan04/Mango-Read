@@ -1,6 +1,16 @@
+.Card a {
+  text-decoration: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 5.73%,
+    rgba(0, 0, 0, 0.5) 66.15%
+  );
+  border-radius: 16px;
+}
 .Card {
-  width: 190px;
-  height: 220px;
+  padding: 0 !important;
+}
+.CardInner {
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 5.73%,
@@ -9,27 +19,24 @@
   border-radius: 16px;
   padding-top: 141px;
   padding-left: 10px;
-}
-.Card img {
-  width: 50px;
-  height: 50px;
+  width: 190px !important;
+  height: 220px !important;
+  overflow: hidden;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
-.Card p {
+.CardInner p {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: red;
+  color: white;
   margin-top: 11px;
 }
 
-.Card span {
+.CardInner span {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: red;
-}
-
-.ul a {
-  text-decoration: none;
+  color: white;
 }
