@@ -20,29 +20,30 @@ export const getComments = createAsyncThunk("comments", async (id) => {
   return data.reverse();
 });
 
-export const getScanning = createAsyncThunk('scan', async (scan) => {
-  const {data} = await axios.get(link+'manga/?search='+scan)
-  if(scan.length === ''){
-    return []
-  }else{
-    return data
-  }
-})
+export const addComments = createAsyncThunk("addComments", async (data) => {
+  const { id, text } = data;
+  const response = await axios
+    .post(`${link}manga/${id}/add-comment/`, text, {
+      headers: {
+        Authorization: `Bearer ${JSON.parse(
+          JSON.stringify(localStorage.getItem("tokenAccess"))
+        )}`,
+      },
+    })
+    .then((response) => console.log(response))
+    .catch((error) => console.log(error));
+  return response;
+});
 
-// export const addComment = createAsyncThunk(
-//   "addCommentsUser",
-//   async ({ id, text, access }) => {
-//     await axios.post(
-//       link + "manga/" + id + "/add-comment/",
-//       { text: text },
-//       {
-//         headers: {
-//           Authorization: "Bearer " + access,
-//         }, 
-//       }
-//     );
-//   }
-// );
+export const getScanning = createAsyncThunk("scan", async (scan) => {
+  const { data } = await axios.get(link + "manga/?search=" + scan);
+  if (scan.length === "") {
+    return [];
+  } else {
+    return data;
+  }
+});
+
 const cardsSlice = createSlice({
   name: "cardsSlice",
   initialState,
@@ -51,8 +52,8 @@ const cardsSlice = createSlice({
       state.offset = action.payload;
     },
     setScann: (state, action) => {
-      state.scann = action.payload
-    }
+      state.scann = action.payload;
+    },
   },
   extraReducers: (build) => {
     build
@@ -71,8 +72,8 @@ const cardsSlice = createSlice({
         state.isLoad = false;
       })
       .addCase(getScanning.fulfilled, (state, action) => {
-        state.scann = action.payload
-      })
+        state.scann = action.payload;
+      });
   },
 });
 

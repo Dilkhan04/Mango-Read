@@ -90,18 +90,37 @@
   background: #2fe09b;
 }
 
-
 .scanImg {
   display: flex;
   align-items: center;
   column-gap: 10px;
 }
 .SearchBox a {
- width: max-content;
- height: max-content;
+  width: max-content;
+  height: max-content;
 }
 .scanImg img {
   width: 50px;
   height: 50px;
   border-radius: 8px;
+}
+.UserAccount {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  column-gap: 25px;
+}
+.UserAccount p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+}
+.UserAccount button {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
+}
+.UserAccount button:hover {
+  background: white;
 }

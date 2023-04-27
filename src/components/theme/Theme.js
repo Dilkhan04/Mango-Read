@@ -68,12 +68,6 @@ export const theme = createTheme({
     secondary: {
       main: "#2FE09B",
     },
-    success: {
-      main: "#878787",
-    },
-    info: {
-      main: "#000",
-    },
   },
 });
 export const InputModal = styled(TextField)({

@@ -17,7 +17,7 @@ import { getCards } from "../../../redux/slices/CardsSlice";
 
 export default function Filter({ typ, setTyp, offset, move, setMove }) {
   const dispatch = useDispatch();
-  const typesMangas = ["Манга", "Манхва", "Комиксы", "Маньхуа"];
+  const typesMangas = ["Манга", "Манхва", "Западный комикс", "Маньхуа"];
 
   const click = () => {
     dispatch(

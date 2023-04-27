@@ -39,7 +39,7 @@ export default function FilterNext({ genr, setGenr, offset, setMove, move }) {
     setGenr("");
   };
 
-  const moved = () => setMove(!move)
+  const moved = () => setMove(!move);
 
   useEffect(() => {
     dispatch(genreManga());

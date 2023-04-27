@@ -27,7 +27,6 @@
 .FilterTitle button > span {
   font-weight: 400;
   font-size: 24px;
-  line-height: 35px;
   color: #878787;
 }
 .FilterTitle button > svg {
@@ -57,7 +56,7 @@
 }
 
 .TypesList li div label span {
-  margin-left: 10px;
+  width: max-content;
 }
 
 .TypesList li {

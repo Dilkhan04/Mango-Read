@@ -1,51 +1,55 @@
-.ModalInner {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: #ffffff;
-  border-radius: 32px;
-  padding: 37px 60px 60px;
-  transition: 0.7s;
+.Modal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.UserData {
+.ModalInner {
+  width: 780px;
+  height: 302px;
+  background: white;
+  border-radius: 32px;
+  padding: 37px 0px 0px 60px;
+}
+.ModalTitle {
+  height: 137px;
   display: flex;
 }
-.UserData img {
+.ModalTitle img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin: 0 52px 53px 0;
-  background-color: #c9c9c9;
+  margin-right: 52px;
 }
-.UserData h3 {
+.ModalTitle span {
   font-weight: 400;
   font-size: 35px;
   line-height: 43px;
+  color: black;
 }
-.CommentAdd {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 55px;
-}
-.CommentAdd button {
-  height: 51px;
+.ModalInner button {
+  width: 160px;
+  height: 52px;
   border-radius: 0 8px 8px 0;
-  padding: 0 32px;
-  display: flex;
-  justify-content: center !important;
-  align-items: center !important;
+  background: #ad02e0;
+  color: white;
 }
-.CommentAdd fieldset {
-  border-radius: 8px 0 0 8px !important;
-  height: 57px !important;
-  width: 500px;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
+.ModalInner button:hover {
+  background: #ad02e0;
 }
-.CommentAdd input {
-  height: 51px !important;
+.ModalInner button:active {
+  background: #740994;
+}
+.ModalInput {
   width: 500px;
-  padding: 0 !important;
+  height: 52px;
+}
+.ModalInput input {
+  padding: 0 0 0 20px;
+  width: 500px;
+  height: 52px;
+}
+.ModalInput div {
+  border-radius: 8px 0px 0px 8px;
+  padding-right: 10px !important;
 }

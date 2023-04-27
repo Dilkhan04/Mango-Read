@@ -5,19 +5,13 @@ import RegAndAuth from "../../regAndAuth/RegAndAuth";
 
 export default function ButtonsHeader({ handleClose, index }) {
   const [open, setOpen] = useState(false);
-  const [tab, setTab] = useState(false);
-  const [reg, setReg] = useState(false)
+  const [reg, setReg] = useState(false);
 
   const openAuth = (sig = false) => {
     setOpen(true);
-    setTab(false);
-    setReg(sig)
+    setReg(sig);
   };
 
-  // const openReg = () => {
-  //   setOpen(true);
-  //   setTab(true);
-  // };
   return (
     <>
       <Box className={style.Btns}>
@@ -33,8 +27,7 @@ export default function ButtonsHeader({ handleClose, index }) {
         open={open}
         click={handleClose}
         setOpen={setOpen}
-        tab={tab}
-        setTab={setTab}
+        setReg={setReg}
       />
     </>
   );

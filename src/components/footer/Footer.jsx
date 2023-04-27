@@ -80,16 +80,12 @@ export default function Footer() {
           </Box>
         </Box>
       </Container>
-      <Box className={style.FooterInnerBootom}>
-        <Box className={style.Bottom}>
-          <Box>
-            <Link to='/#' alt='twitter'>
-              <Typography component='span'>
-                ©2022, All right reserved.
-              </Typography>
-            </Link>
-          </Box>
-          <Box className={style.Right}>
+      <Box className={style.FooterInnerBottom}>
+        <Box className={style.FooterBottom}>
+          <Link to='/#' alt='twitter'>
+            <Typography component='span'>©2022, All right reserved.</Typography>
+          </Link>
+          <Box className={style.FooterBottomInner}>
             <Link to='/#' alt='twitter'>
               <Typography component='span'>Privacy Policy</Typography>
             </Link>

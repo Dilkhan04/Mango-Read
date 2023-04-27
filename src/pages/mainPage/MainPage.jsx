@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from "react";
 import style from "./scss/MainPage.module.scss";
-import {
-  Box,
-  CircularProgress,
-  Container,
-  List,
-  PaginationItem,
-} from "@mui/material";
+import { Box, CircularProgress, Container, List } from "@mui/material";
 import Filter from "../../components/mainPage/filter/Filter";
 import { useDispatch, useSelector } from "react-redux";
-import { ReactComponent as Right } from "../../media/icons/arrow/Vector 3.svg";
-import { ReactComponent as Left } from "../../media/icons/arrow/Vector 2.svg";
 import { PaginationMangas } from "../../components/theme/Theme";
 import {
   cardsSelect,
@@ -20,13 +12,13 @@ import {
 import Card from "../../components/mainPage/card/Card";
 import FilterNext from "../../components/mainPage/filter/FilterNext";
 
+const limit = 12;
 export default function MainPage() {
   const dispatch = useDispatch();
   const { cards, isLoad, offset } = useSelector(cardsSelect);
-  const [typ, setTyp] = useState('')
-  const [genr, setGenr] = useState('')
-  const [move, setMove] = useState(false)
-  let limit = 12;
+  const [typ, setTyp] = useState("");
+  const [genr, setGenr] = useState("");
+  const [move, setMove] = useState(false);
 
   useEffect(() => {
     dispatch(
@@ -34,7 +26,7 @@ export default function MainPage() {
         limit,
         offset,
         type: typ,
-        genre__title: genr
+        genre__title: genr,
       })
     );
   }, [dispatch, limit, offset]);
@@ -49,11 +41,23 @@ export default function MainPage() {
         }}
       >
         <Box className={style.MainPageInner}>
-          {
-            !move
-            ? <Filter move={move} setMove={setMove} typ={typ} setTyp={setTyp} offset={offset}/>
-            : <FilterNext move={move} setMove={setMove} genr={genr} setGenr={setGenr} offset={offset}/>
-          }
+          {!move ? (
+            <Filter
+              move={move}
+              setMove={setMove}
+              typ={typ}
+              setTyp={setTyp}
+              offset={offset}
+            />
+          ) : (
+            <FilterNext
+              move={move}
+              setMove={setMove}
+              genr={genr}
+              setGenr={setGenr}
+              offset={offset}
+            />
+          )}
           <Box className={style.MangaCards}>
             {!isLoad ? (
               <List className={style.Cards}>
@@ -69,7 +73,7 @@ export default function MainPage() {
           </Box>
         </Box>
       </Container>
-      {cards.count >= 12 && (
+      {cards.count >= limit && (
         <PaginationMangas
           className={style.MainPagePagination}
           page={offset / limit + 1}
@@ -77,9 +81,6 @@ export default function MainPage() {
           count={Math.ceil(cards?.count / limit)}
           size='large'
           color='secondary'
-          renderItem={(item) => (
-            <PaginationItem slots={{ previous: Left, next: Right }} {...item} />
-          )}
         />
       )}
     </Box>

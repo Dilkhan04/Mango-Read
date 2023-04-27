@@ -1,3 +1,6 @@
+.Card {
+  padding: 0 !important;
+}
 .Card a {
   text-decoration: none;
   background: linear-gradient(
@@ -6,9 +9,6 @@
     rgba(0, 0, 0, 0.5) 66.15%
   );
   border-radius: 16px;
-}
-.Card {
-  padding: 0 !important;
 }
 .CardInner {
   background: linear-gradient(
