@@ -23,11 +23,15 @@ export const getComments = createAsyncThunk("comments", async (id) => {
 export const addComments = createAsyncThunk("addComments", async (data) => {
   const { id, text, access } = data;
   const response = await axios
-    .post(`${link}manga/${id}/add-comment/`, {text}, {
-      headers: {
-        Authorization: `Bearer ${access}`,
-      },
-    })
+    .post(
+      `${link}manga/${id}/add-comment/`,
+      { text },
+      {
+        headers: {
+          Authorization: `Bearer ${access}`,
+        },
+      }
+    )
     .then((response) => console.log(response))
     .catch((error) => console.log(error));
   return response;

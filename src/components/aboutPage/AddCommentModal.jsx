@@ -19,6 +19,7 @@ export default function AddCommentModal({ open, id, setOpen }) {
     setOpen(false);
     if (user) {
       await dispatch(addComments({ id: id, text: com, access: access }));
+      dispatch(getComments(id));
     } else {
       Swal.fire({
         icon: "error",
